@@ -1,4 +1,5 @@
 package avaj_launcher;
 
-public class Main {
+public class Main
+{
 }
