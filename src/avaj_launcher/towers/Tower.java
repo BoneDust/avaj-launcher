@@ -9,14 +9,14 @@ import java.util.ArrayList;
 
 public class Tower
 {
-    private static ArrayList<Flyable> observers = new ArrayList<>();
+    private ArrayList<Flyable> observers = new ArrayList<>();
 
-    protected static void conditionsChanged()
+    protected void conditionsChanged()
     {
         //todo
     }
 
-    private static String getFlyableType(Flyable flyable)
+    private String getFlyableType(Flyable flyable)
     {
         if (flyable instanceof Baloon)
             return ("Baloon ");
@@ -26,7 +26,7 @@ public class Tower
             return ("Helicopter ");
     }
 
-    public static void register(Flyable flyable)
+    public void register(Flyable flyable)
     {
         String logMessage = getFlyableType(flyable);
         logMessage +=  ((Aircraft) flyable).getName() + "(" + ((Aircraft) flyable).getId()  + ") registered from weather tower.";
@@ -34,7 +34,7 @@ public class Tower
         observers.add(flyable);
     }
 
-    public static void unregister(Flyable flyable)
+    public void unregister(Flyable flyable)
     {
         for (Flyable aircraft :  observers )
         {
