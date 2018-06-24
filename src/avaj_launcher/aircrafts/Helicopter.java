@@ -14,7 +14,7 @@ public class Helicopter extends Aircraft implements Flyable
 
     public void updateConditions()
     {
-
+        //todo
     }
 
     public void registerTower(WeatherTower weatherTower)
