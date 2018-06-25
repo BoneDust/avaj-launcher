@@ -1,6 +1,6 @@
 package com.avaj_launcher.aircrafts;
 
-import com.avaj_launcher.towers.WeatherTower;
+import com.avaj_launcher.WeatherTower;
 
 import java.util.HashMap;
 import java.util.Map;

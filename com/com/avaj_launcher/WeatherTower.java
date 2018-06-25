@@ -1,9 +1,10 @@
-package com.avaj_launcher.towers;
+package com.avaj_launcher;
 
 import com.avaj_launcher.aircrafts.Coordinates;
+import com.avaj_launcher.towers.Tower;
 import com.avaj_launcher.weather.WeatherProvider;
 
-public class WeatherTower extends  Tower
+public class WeatherTower extends Tower
 {
     public String getWeather(Coordinates coordinates)
     {
@@ -13,6 +14,6 @@ public class WeatherTower extends  Tower
 
     void changeWeather()
     {
-        //todo
+        conditionsChanged();
     }
 }

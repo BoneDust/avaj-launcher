@@ -1,10 +1,6 @@
 package com.avaj_launcher.towers;
 
-import com.avaj_launcher.aircrafts.Aircraft;
-import com.avaj_launcher.aircrafts.Baloon;
-import com.avaj_launcher.aircrafts.Flyable;
-import com.avaj_launcher.aircrafts.JetPlane;
-
+import com.avaj_launcher.aircrafts.*;
 import java.util.ArrayList;
 
 public class Tower
@@ -13,7 +9,8 @@ public class Tower
 
     protected void conditionsChanged()
     {
-        //todo
+        for (Flyable flyable : observers)
+            flyable.updateConditions();
     }
 
     private String getFlyableType(Flyable flyable)
