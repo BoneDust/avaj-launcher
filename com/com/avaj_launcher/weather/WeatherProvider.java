@@ -1,6 +1,6 @@
-package avaj_launcher.weather;
+package com.avaj_launcher.weather;
 
-import avaj_launcher.aircrafts.Coordinates;
+import com.avaj_launcher.aircrafts.Coordinates;
 
 import java.util.Random;
 

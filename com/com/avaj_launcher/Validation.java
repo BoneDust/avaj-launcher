@@ -1,4 +1,4 @@
-package avaj_launcher;
+package com.avaj_launcher;
 
 public class Validation {
 }

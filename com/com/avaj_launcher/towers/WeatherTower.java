@@ -1,7 +1,7 @@
-package avaj_launcher.towers;
+package com.avaj_launcher.towers;
 
-import avaj_launcher.aircrafts.Coordinates;
-import avaj_launcher.weather.WeatherProvider;
+import com.avaj_launcher.aircrafts.Coordinates;
+import com.avaj_launcher.weather.WeatherProvider;
 
 public class WeatherTower extends  Tower
 {
