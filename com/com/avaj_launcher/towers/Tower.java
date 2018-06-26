@@ -9,8 +9,8 @@ public class Tower
 
     protected void conditionsChanged()
     {
-        for (Flyable flyable : observers)
-            flyable.updateConditions();
+        for (int i = 0; i < observers.size(); i++)
+            observers.get(i).updateConditions();
     }
 
     private String getFlyableType(Flyable flyable)
@@ -26,21 +26,21 @@ public class Tower
     public void register(Flyable flyable)
     {
         String logMessage = "Tower says: " + getFlyableType(flyable);
-        logMessage +=  ((Aircraft) flyable).getName() + "(" + ((Aircraft) flyable).getId()  + ") registered from weather tower.";
+        logMessage +=  ((Aircraft) flyable).getName() + "(" + ((Aircraft) flyable).getId()  + ") registered to weather tower.";
         System.out.println(logMessage);
         observers.add(flyable);
     }
 
     public void unregister(Flyable flyable)
     {
-        for (Flyable aircraft :  observers )
+        for (int i = 0; i <observers.size(); i++)
         {
-            if (aircraft == flyable)
+            if (observers.get(i) == flyable)
             {
                 String logMessage = "Tower says: " + getFlyableType(flyable);
-                logMessage += ((Aircraft) aircraft).getName() + "(" + ((Aircraft) aircraft).getId()  + ") unregistered from weather tower.";
+                logMessage += ((Aircraft) flyable).getName() + "(" + ((Aircraft) flyable).getId()  + ") unregistered from weather tower.";
                 System.out.println(logMessage);
-                observers.remove(aircraft);
+                observers.remove(flyable);
                 break;
             }
         }

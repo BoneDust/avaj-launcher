@@ -1,9 +1,6 @@
 package com.avaj_launcher;
 
-import com.avaj_launcher.aircrafts.Aircraft;
 import com.avaj_launcher.aircrafts.AircraftFactory;
-import com.avaj_launcher.aircrafts.Baloon;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -21,19 +18,17 @@ public class Main
                 int simulations = initScenario(tower, filename);
                 while (simulations > 0)
                 {
+                    System.out.println("");
                     tower.changeWeather();
                     simulations--;
                 }
             }
-            else
-                return (0);
         }
         else
             System.out.println("Incorrect usage. Supply only the name of the scenario file.");
-        return (0);
     }
 
-    private int initScenario(WeatherTower tower, String filename)
+    private static int initScenario(WeatherTower tower, String filename)
     {
         BufferedReader br;
         AircraftFactory factory = new AircraftFactory();
@@ -44,7 +39,6 @@ public class Main
             String line;
             while ((line = br.readLine()) != null)
             {
-
                 lines++;
                 line = line.trim();
                 if (lines == 1)

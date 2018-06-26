@@ -56,7 +56,7 @@ public class Validation
 
     private static boolean isTypeValid(String type)
     {
-        if (type.equals("Baloon") || type.equals("Jet"))
+        if (type.equals("Baloon") || type.equals("JetPlane") || type.equals("Helicopter"))
             return (true);
         else
             return (false);
